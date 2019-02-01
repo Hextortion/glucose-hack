@@ -167,7 +167,7 @@ verbosity(0)
 , newDescent(0)
 , randomDescentAssignments(0)
 , forceUnsatOnNewDescent(opt_forceunsat)
-
+, forceRestart(false)
 , ok(true)
 , cla_inc(1)
 , var_inc(1)
@@ -253,6 +253,7 @@ Solver::Solver(const Solver &s) :
 , newDescent(s.newDescent)
 , randomDescentAssignments(s.randomDescentAssignments)
 , forceUnsatOnNewDescent(s.forceUnsatOnNewDescent)
+, forceRestart(s.forceRestart)
 , ok(true)
 , cla_inc(s.cla_inc)
 , var_inc(s.var_inc)
@@ -1563,6 +1564,12 @@ lbool Solver::search(int nof_conflicts) {
                 stats[nbUn]++;
                 parallelExportUnaryClause(learnt_clause[0]);
             } else {
+
+                // Export learned clauses to users of Glucose
+                if (clauseCallback) {
+                    clauseCallback(learnt_clause);
+                }
+
                 CRef cr;
                 if(chanseokStrategy && nblevels <= coLBDBound) {
                     cr = ca.alloc(learnt_clause, false);
@@ -1645,14 +1652,29 @@ lbool Solver::search(int nof_conflicts) {
                 }
             }
 
+            // Check with the user of the solver if the solver should terminate
+            if (doneCallback()) {
+                return l_True;
+            }
+
             if(next == lit_Undef) {
                 // New variable decision:
                 decisions++;
                 next = pickBranchLit();
-                if(next == lit_Undef) {
-		    // printf("c last restart ## conflicts  :  %d %d \n", conflictC, decisionLevel());
-                    // Model found:
-                    return l_True;
+                if (next == lit_Undef) {
+                    // In the learn clauses mode, we force a random restart even if we have found a valid
+                    // satisfying assignment. The goal is to keep learning clauses not to find satisfying
+                    // assignments in this case.
+                    if (forceRestart) {
+                        newDescent = true;
+                        randomDescentAssignments = (uint32_t)drand(random_seed);
+                        cancelUntil(0);
+                        return l_Undef;
+                    } else {
+                        // printf("c last restart ## conflicts  :  %d %d \n", conflictC, decisionLevel());
+                        // Model found:
+                        return l_True;
+                    }
                 }
             }
 
