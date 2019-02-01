@@ -1,42 +1,41 @@
-/Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/Main.o /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/Main.or /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/Main.od /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/Main.op: \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/Main.cc \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../utils/System.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/IntTypes.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../utils/ParseUtils.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../utils/Options.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Vec.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/XAlloc.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/Dimacs.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/SolverTypes.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Alg.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Map.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Alloc.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../simp/SimpSolver.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Queue.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/Solver.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Heap.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/BoundedQueue.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/Constants.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Clone.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/SolverStats.h
-/Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/SimpSolver.o /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/SimpSolver.or /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/SimpSolver.od /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/SimpSolver.op: \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/SimpSolver.cc \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Sort.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Vec.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/IntTypes.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/XAlloc.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../simp/SimpSolver.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Queue.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/Solver.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Heap.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Alg.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../utils/Options.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../utils/ParseUtils.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/SolverTypes.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Map.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Alloc.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/BoundedQueue.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/Constants.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../mtl/Clone.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../core/SolverStats.h \
-  /Users/riener/projects/exact_esop/esop_synthesis/ext/glucose-syrup-4.1/simp/../utils/System.h
+/home/stefan/glucose-syrup-4.1/glucose/simp/Main.o /home/stefan/glucose-syrup-4.1/glucose/simp/Main.or /home/stefan/glucose-syrup-4.1/glucose/simp/Main.od /home/stefan/glucose-syrup-4.1/glucose/simp/Main.op: C:/msys64/home/stefan/glucose-syrup-4.1/glucose/simp/Main.cc \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/utils/System.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/IntTypes.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/utils/ParseUtils.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/utils/Options.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Vec.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/XAlloc.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/Dimacs.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/SolverTypes.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Alg.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Map.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Alloc.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/simp/SimpSolver.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Queue.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/Solver.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Heap.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/BoundedQueue.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/Constants.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Clone.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/SolverStats.h
+/home/stefan/glucose-syrup-4.1/glucose/simp/SimpSolver.o /home/stefan/glucose-syrup-4.1/glucose/simp/SimpSolver.or /home/stefan/glucose-syrup-4.1/glucose/simp/SimpSolver.od /home/stefan/glucose-syrup-4.1/glucose/simp/SimpSolver.op: \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/simp/SimpSolver.cc \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Sort.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Vec.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/IntTypes.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/XAlloc.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/simp/SimpSolver.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Queue.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/Solver.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Heap.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Alg.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/utils/Options.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/utils/ParseUtils.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/SolverTypes.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Map.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Alloc.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/BoundedQueue.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/Constants.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/mtl/Clone.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/core/SolverStats.h \
+ C:/msys64/home/stefan/glucose-syrup-4.1/glucose/utils/System.h

@@ -9,19 +9,19 @@
                                 Labri - Univ. Bordeaux, France
 
 Glucose sources are based on MiniSat (see below MiniSat copyrights). Permissions and copyrights of
-Glucose (sources until 2013, Glucose 3.0, single core) are exactly the same as Minisat on which it 
+Glucose (sources until 2013, Glucose 3.0, single core) are exactly the same as Minisat on which it
 is based on. (see below).
 
 Glucose-Syrup sources are based on another copyright. Permissions and copyrights for the parallel
 version of Glucose-Syrup (the "Software") are granted, free of charge, to deal with the Software
 without restriction, including the rights to use, copy, modify, merge, publish, distribute,
-sublicence, and/or sell copies of the Software, and to permit persons to whom the Software is 
+sublicence, and/or sell copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
 - The above and below copyrights notices and this permission notice shall be included in all
 copies or substantial portions of the Software;
 - The parallel version of Glucose (all files modified since Glucose 3.0 releases, 2013) cannot
-be used in any competitive event (sat competitions/evaluations) without the express permission of 
+be used in any competitive event (sat competitions/evaluations) without the express permission of
 the authors (Gilles Audemard / Laurent Simon). This is also the case for any competitive event
 using Glucose Parallel as an embedded SAT engine (single core or not).
 
@@ -51,7 +51,9 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 
 #include <signal.h>
 #include <zlib.h>
+#ifndef _WIN32
 #include <sys/resource.h>
+#endif
 
 #include "utils/System.h"
 #include "utils/ParseUtils.h"
@@ -171,11 +173,12 @@ int main(int argc, char** argv)
         }
 
         solver = &S;
+
+#ifndef _WIN32
         // Use signal handlers that forcibly quit until the solver will be able to respond to
         // interrupts:
         signal(SIGINT, SIGINT_exit);
         signal(SIGXCPU,SIGINT_exit);
-
 
         // Set limit on CPU-time:
         if (cpu_lim != INT32_MAX){
@@ -197,6 +200,7 @@ int main(int argc, char** argv)
                 if (setrlimit(RLIMIT_AS, &rl) == -1)
                     printf("c WARNING! Could not set resource limit: Virtual memory.\n");
             } }
+#endif
 
         if (argc == 1)
             printf("c Reading from standard input... Use '--help' for help.\n");
@@ -222,10 +226,12 @@ int main(int argc, char** argv)
             printf("c |  Parse time:           %12.2f s                                                                 |\n", parsed_time - initial_time);
             printf("c |                                                                                                       |\n"); }
 
+#ifndef _WIN32
         // Change to signal-handlers that will only notify the solver and allow it to terminate
         // voluntarily:
         signal(SIGINT, SIGINT_interrupt);
         signal(SIGXCPU,SIGINT_interrupt);
+#endif
 
         S.parsing = 0;
         if(pre/* && !S.isIncremental()*/) {
